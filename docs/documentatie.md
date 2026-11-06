@@ -113,6 +113,7 @@ Bij een negatief verschil deel ik door de positieve macht, omdat dat nauwkeurige
 | Onderkant van tabteksten ("Vergelijk") werd afgekapt | Tabtekst mag niet meer krimpen |
 | Keuzerondjes gaven hun status niet door aan screenreaders | Overgestapt op `aria-checked` |
 | Lint: ref werd tijdens het tekenen aangepast in `useShake` | Aanpassing verplaatst naar `useEffect` |
+| Tabbalk was te krap, de tekst stond bijna op de onderrand | Tabbalk hoger gemaakt, met de veilige zone van de telefoon meegerekend |
 
 **Planning en urenverantwoording:** *[eigen planning en bestede tijd invullen]*
 

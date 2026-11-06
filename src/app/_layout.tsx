@@ -2,10 +2,14 @@ import { Ionicons } from '@expo/vector-icons';
 import { DarkTheme, DefaultTheme, ThemeProvider } from 'expo-router';
 import { Tabs } from 'expo-router/js-tabs';
 import { StatusBar } from 'expo-status-bar';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { AppProvider, useApp } from '../context/AppContext';
+
+const TAB_BAR_HEIGHT = 64;
 
 function ThemedTabs() {
   const { isDark, colors } = useApp();
+  const insets = useSafeAreaInsets();
   const baseTheme = isDark ? DarkTheme : DefaultTheme;
 
   return (
@@ -29,6 +33,13 @@ function ThemedTabs() {
           tabBarInactiveTintColor: colors.muted,
           // Niet laten krimpen, anders wordt de onderkant van de "g" en "j" afgekapt.
           tabBarLabelStyle: { fontSize: 11, lineHeight: 14, flexShrink: 0 },
+          // De standaardhoogte is te krap: houd ruimte onder de tekst en boven de
+          // navigatiebalk of thuisbalk van de telefoon.
+          tabBarStyle: {
+            height: TAB_BAR_HEIGHT + insets.bottom,
+            paddingTop: 6,
+            paddingBottom: 8 + insets.bottom,
+          },
         }}
       >
         <Tabs.Screen
