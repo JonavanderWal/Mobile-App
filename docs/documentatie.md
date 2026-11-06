@@ -5,7 +5,6 @@
 | **Keuzedeel** | D1: Mobile application development |
 | **Kerntaak** | D1-K1: Realiseert (onderdelen van) een mobiele applicatie |
 | **Student** | Jona van der Wal |
-| **Datum** | *[datum invullen]* |
 | **Versie app** | 1.0.0 |
 
 ## 1. De opdracht en de eisen
@@ -114,9 +113,6 @@ Bij een negatief verschil deel ik door de positieve macht, omdat dat nauwkeurige
 | Keuzerondjes gaven hun status niet door aan screenreaders | Overgestapt op `aria-checked` |
 | Lint: ref werd tijdens het tekenen aangepast in `useShake` | Aanpassing verplaatst naar `useEffect` |
 | Tabbalk was te krap, de tekst stond bijna op de onderrand | Tabbalk hoger gemaakt, met de veilige zone van de telefoon meegerekend |
-
-**Planning en urenverantwoording:** *[eigen planning en bestede tijd invullen]*
-
 ## 5. Ontwerp
 
 Het ontwerp is afgeleid van serverapparatuur in een datacenter, omdat daar de opslag staat.
@@ -127,7 +123,3 @@ Het ontwerp is afgeleid van serverapparatuur in een datacenter, omdat daar de op
 - **App-icoon:** drie serverschijven met statuslampjes.
 
 Light- en darkmode hebben dezelfde opbouw en elk een eigen kleurenset in `src/theme/colors.ts`.
-
-### Screenshots
-
-*[Screenshots van de telefoon toevoegen: de drie schermen, in light en in dark.]*

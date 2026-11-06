@@ -64,9 +64,6 @@ In de browser kon ik niet controleren of de gekopieerde tekst echt op het klembo
 
 ## 4. Test op de telefoon
 
-**Toestel:** *[merk, model, Android/iOS-versie]*
-**Datum:** *[invullen]*
-
 | # | Stap | Verwacht | Geslaagd? |
 | --- | --- | --- | --- |
 | T1 | Project openen in Expo Go | App start zonder melding over de SDK-versie | Ja |
