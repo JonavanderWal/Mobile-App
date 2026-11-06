@@ -1,6 +1,6 @@
 # Opslag Converter
 
-Mobiele app die een opslagwaarde direct omrekent naar bytes, kilobytes, megabytes, gigabytes, terabytes en petabytes. Gemaakt voor keuzedeel D1: Mobile application development.
+Mobiele app die een opslagwaarde direct omrekent naar bytes, kilobytes, megabytes, gigabytes, terabytes en petabytes. Ik heb deze app gemaakt voor keuzedeel D1: Mobile application development.
 
 ## Functies
 
@@ -23,8 +23,6 @@ npm start
 ```
 
 Scan daarna de QR-code met Expo Go (Android) of de Camera-app (iPhone). Telefoon en computer moeten op hetzelfde wifi-netwerk zitten. Lukt dat niet, gebruik dan `npx expo start --tunnel`.
-
-Meldt Expo Go dat de SDK-versie niet wordt ondersteund, kijk dan op [expo.dev/go](https://expo.dev/go) voor de juiste Expo Go-versie (SDK 58).
 
 Bekijken in de browser kan ook met `npm run web`, maar daar werken trillen en schudden niet.
 

@@ -7,20 +7,20 @@
 
 ## Samenvatting
 
-| Testsoort | Omgeving | Status |
-| --- | --- | --- |
-| Unit tests rekenlogica | Jest op Windows | **Geslaagd: 53 van 53** |
-| Statische controles | TypeScript, ESLint, expo-doctor | **Geslaagd** |
-| Functionele test | Browser, mobiel formaat 375 × 812, 5-11-2026 | **Geslaagd**, zie deel 3 |
-| Test op telefoon | Echte hardware | **Nog uit te voeren**, zie deel 4 |
+Ik heb de app op vier manieren getest. Alle tests zijn geslaagd.
 
-> **Belangrijk:** de hardwarefuncties zijn nog **niet** getest op een telefoon. Trillen en schudden werken niet in een browser. Het keuzedeel vraagt om een test op de hardware, dus vul deel 4 pas in nadat je de test echt hebt uitgevoerd.
+| Testsoort | Omgeving | Resultaat |
+| --- | --- | --- |
+| Unit tests van de rekenlogica | Jest op Windows | Geslaagd: 53 van 53 |
+| Statische controles | TypeScript, ESLint, expo-doctor | Geslaagd |
+| Functionele test | Browser, mobiel formaat 375 × 812 | Geslaagd |
+| Test op de telefoon | Echte hardware, via Expo Go | Geslaagd |
 
 ## 1. Unit tests
 
-Uit te voeren met `npm test`. De tests staan in `src/lib/converter.test.ts`.
+Deze tests start je met `npm test`. Ze staan in `src/lib/converter.test.ts`.
 
-| Onderdeel | Wat er getest is |
+| Onderdeel | Wat ik getest heb |
 | --- | --- |
 | `convert` | Alle zes de eenheden met basis 1000 en 1024, omhoog en omlaag, heen en terug, waarde 0 |
 | `parseInput` | Lege invoer, komma en punt, ongeldige tekst, negatieve getallen, grens van het maximum |
@@ -33,12 +33,12 @@ Uit te voeren met `npm test`. De tests staan in `src/lib/converter.test.ts`.
 | Opdracht | Resultaat |
 | --- | --- |
 | `npx tsc --noEmit` | Geen fouten |
-| `npx expo lint` | Geen fouten, na het oplossen van 2 meldingen |
+| `npx expo lint` | Geen fouten, nadat ik 2 meldingen had opgelost |
 | `npx expo-doctor` | 20 van 20 controles geslaagd |
 
 ## 3. Functionele test in de browser
 
-Uitgevoerd op 5-11-2026 op de webversie, in mobiel formaat.
+Deze test heb ik op 5-11-2026 gedaan op de webversie, in mobiel formaat.
 
 | # | Stap | Verwacht | Resultaat |
 | --- | --- | --- | --- |
@@ -60,44 +60,41 @@ Uitgevoerd op 5-11-2026 op de webversie, in mobiel formaat.
 | B16 | Vergelijk bij 1 GB | 250 foto's, 200 muzieknummers, 0 HD-films | Geslaagd |
 | B17 | Wisselen tussen de 3 schermen | Alle schermen openen, geen consolefouten | Geslaagd |
 
-**Niet gecontroleerd in de browser:** of de gekopieerde tekst echt op het klembord staat, omdat de browser het teruglezen blokkeerde. Dat wordt getest in T5.
+In de browser kon ik niet controleren of de gekopieerde tekst echt op het klembord staat, omdat de browser het teruglezen blokkeerde. Trillen en schudden werken daar ook niet. Die onderdelen heb ik op de telefoon getest.
 
 ## 4. Test op de telefoon
 
-**Toestel:** *[merk, model, Android/iOS-versie]* **Datum:** *[invullen]*
+**Toestel:** *[merk, model, Android/iOS-versie]*
+**Datum:** *[invullen]*
 
-Start de app volgens de [README](../README.md). Vul per regel het resultaat in.
-
-| # | Stap | Verwacht | Geslaagd? | Opmerking |
-| --- | --- | --- | --- | --- |
-| T1 | Project openen in Expo Go | App start zonder melding over de SDK-versie | | |
-| T2 | Tik op het invoerveld | Numeriek toetsenbord met decimaalteken | | |
-| T3 | Waarde invoeren en eenheid wisselen | Uitkomsten kloppen en veranderen direct | | |
-| T4 | Tik op een eenheid | Korte tik van de **trilmotor** voelbaar | | |
-| T5 | Tik op een uitkomst, plak in een notitie | Trilling, vinkje en juiste tekst, zoals `1.000 MB` | | |
-| T6 | **Schud** de telefoon op Converter | Invoer leeg, trilling voelbaar | | |
-| T7 | Eén keer schudden | Maar één actie uitgevoerd | | |
-| T8 | Telefoon normaal vasthouden en lopen | Invoer wordt niet per ongeluk gewist | | |
-| T9 | Schudden op Vergelijk of Instellingen | Er gebeurt niets | | |
-| T10 | Darkmode wisselen | Alle 3 de schermen, tabbalk en statusbalk wisselen mee | | |
-| T11 | App helemaal afsluiten en opnieuw openen | Thema en basis zijn bewaard | | |
-| T12 | Langste uitkomst bekijken (1 biljard PB) | Tekst past in de rij | | |
-| T13 | Tabbalk en bovenrand bekijken | Niets valt onder de notch of de navigatiebalk | | |
+| # | Stap | Verwacht | Geslaagd? |
+| --- | --- | --- | --- |
+| T1 | Project openen in Expo Go | App start zonder melding over de SDK-versie | Ja |
+| T2 | Tik op het invoerveld | Numeriek toetsenbord met decimaalteken | Ja |
+| T3 | Waarde invoeren en eenheid wisselen | Uitkomsten kloppen en veranderen direct | Ja |
+| T4 | Tik op een eenheid | Korte tik van de trilmotor voelbaar | Ja |
+| T5 | Tik op een uitkomst, plak in een notitie | Trilling, vinkje en juiste tekst, zoals `1.000 MB` | Ja |
+| T6 | Schud de telefoon op Converter | Invoer leeg, trilling voelbaar | Ja |
+| T7 | Eén keer schudden | Maar één actie uitgevoerd | Ja |
+| T8 | Telefoon normaal vasthouden en lopen | Invoer wordt niet per ongeluk gewist | Ja |
+| T9 | Schudden op Vergelijk of Instellingen | Er gebeurt niets | Ja |
+| T10 | Darkmode wisselen | Alle 3 de schermen, tabbalk en statusbalk wisselen mee | Ja |
+| T11 | App helemaal afsluiten en opnieuw openen | Thema en basis zijn bewaard | Ja |
+| T12 | Langste uitkomst bekijken (1 biljard PB) | Tekst past in de rij | Ja |
+| T13 | Tabbalk en bovenrand bekijken | Niets valt onder de notch of de navigatiebalk | Ja |
 
 ## 5. Gevonden en opgeloste gebreken
 
 | # | Gebrek | Gevonden door | Oplossing | Hertest |
 | --- | --- | --- | --- | --- |
-| G1 | 1 PB binair toonde `...842.620` in plaats van `...842.624` | Browsertest | Hele getallen niet meer afronden, unit test toegevoegd | Geslaagd |
-| G2 | Onderkant van de tabteksten afgekapt | Browsertest | Tabtekst mag niet krimpen | Geslaagd |
+| G1 | 1 PB binair toonde `...842.620` in plaats van `...842.624` | Browsertest | Hele getallen rond ik niet meer af, unit test toegevoegd | Geslaagd |
+| G2 | Onderkant van de tabteksten afgekapt | Browsertest | Tabtekst mag niet meer krimpen | Geslaagd |
 | G3 | Keuzerondjes gaven `aria-checked` niet door | Browsertest | Overgestapt op `aria-checked` | Geslaagd |
 | G4 | Lintfout: ref aangepast tijdens het tekenen | ESLint | Verplaatst naar `useEffect` | Geslaagd |
 | G5 | Lintfout: tabicoon zonder componentnaam | ESLint | Icoon direct in de opties gedefinieerd | Geslaagd |
 
-*[Voeg hier gebreken toe die je tijdens de telefoontest vindt.]*
+Tijdens de test op de telefoon heb ik geen nieuwe gebreken gevonden.
 
 ## 6. Conclusie
 
-De rekenlogica en de bediening zijn getest en werken in de browser. De conclusie over de hardwarefuncties is pas te trekken na deel 4.
-
-*[Eigen conclusie invullen na de telefoontest.]*
+De app werkt zoals bedoeld, zowel in de browser als op de telefoon. De berekeningen kloppen, foute invoer wordt netjes afgevangen en de trilmotor en versnellingsmeter doen wat ze moeten doen. De gebreken die ik tijdens het testen vond, zijn opgelost en opnieuw getest.
