@@ -4,7 +4,7 @@
 | --- | --- |
 | **Keuzedeel** | D1: Mobile application development |
 | **Kerntaak** | D1-K1: Realiseert (onderdelen van) een mobiele applicatie |
-| **Student** | *[naam invullen]* |
+| **Student** | Jona van der Wal |
 | **Datum** | *[datum invullen]* |
 | **Versie app** | 1.0.0 |
 
@@ -36,7 +36,7 @@ Ik heb de drie types apps met elkaar vergeleken:
 
 **Mijn keuze: hybride / cross-platform.** De app heeft geen zware berekeningen of grafische eisen, dus de extra snelheid van native levert weinig op. Met één codebase bespaar ik veel tijd, en anders dan bij een webapp kan ik de trilmotor en versnellingsmeter betrouwbaar gebruiken. React Native is wel een bijzonder geval binnen deze groep: het gebruikt echte native schermelementen in plaats van een webweergave.
 
-**Overleg:** *[Met wie besproken, wanneer, wat de wensen van de opdrachtgever waren en wat de uitkomst was. Hoe is de keuze gecommuniceerd?]*
+**Overleg:** dit is een individueel project, dus er waren geen collega's of een team om mee te overleggen. De wensen heb ik uit de opdracht gehaald en de keuze heb ik zelfstandig gemaakt met de vergelijking hierboven. Ik leg de keuze via deze documentatie voor aan mijn docent.
 
 ## 3. Keuze voor omgeving, taal en hardware (D1-K1-W2)
 
@@ -55,7 +55,7 @@ Ik heb de drie types apps met elkaar vergeleken:
 2. **TypeScript vangt fouten vroeg af.** Een verkeerde eenheid of ontbrekende waarde valt al op voordat de app draait.
 3. **Expo Router houdt het overzichtelijk.** Dit is de aanbevolen navigatie van Expo. Elk bestand in `src/app` is een scherm.
 
-**Overleg:** *[Met wie besproken en wat de uitkomst was.]*
+**Overleg:** ook deze keuze heb ik zelfstandig gemaakt, omdat dit een individueel project is.
 
 ### Hardwarefuncties
 

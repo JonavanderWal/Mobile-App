@@ -3,18 +3,18 @@
 | | |
 | --- | --- |
 | **App-versie** | 1.0.0 |
-| **Getest door** | *[naam invullen]* |
+| **Getest door** | Jona van der Wal |
 
 ## Samenvatting
 
-Ik heb de app op vier manieren getest. Alle tests zijn geslaagd, behalve dat T13 na de aanpassing van de tabbalk (G6) nog opnieuw getest moet worden op de telefoon.
+Ik heb de app op vier manieren getest. Alle tests zijn geslaagd.
 
 | Testsoort | Omgeving | Resultaat |
 | --- | --- | --- |
 | Unit tests van de rekenlogica | Jest op Windows | Geslaagd: 53 van 53 |
 | Statische controles | TypeScript, ESLint, expo-doctor | Geslaagd |
 | Functionele test | Browser, mobiel formaat 375 × 812 | Geslaagd |
-| Test op de telefoon | Echte hardware, via Expo Go | T1 t/m T12 geslaagd, T13 opnieuw testen |
+| Test op de telefoon | Echte hardware, via Expo Go | Geslaagd |
 
 ## 1. Unit tests
 
@@ -81,7 +81,7 @@ In de browser kon ik niet controleren of de gekopieerde tekst echt op het klembo
 | T10 | Darkmode wisselen | Alle 3 de schermen, tabbalk en statusbalk wisselen mee | Ja |
 | T11 | App helemaal afsluiten en opnieuw openen | Thema en basis zijn bewaard | Ja |
 | T12 | Langste uitkomst bekijken (1 biljard PB) | Tekst past in de rij | Ja |
-| T13 | Tabbalk en bovenrand bekijken | Niets valt onder de notch of de navigatiebalk, tabbalk heeft ruimte onder de tekst | Opnieuw testen na G6 |
+| T13 | Tabbalk en bovenrand bekijken | Niets valt onder de notch of de navigatiebalk, tabbalk heeft ruimte onder de tekst | Ja, na aanpassing G6 |
 
 ## 5. Gevonden en opgeloste gebreken
 
@@ -92,7 +92,7 @@ In de browser kon ik niet controleren of de gekopieerde tekst echt op het klembo
 | G3 | Keuzerondjes gaven `aria-checked` niet door | Browsertest | Overgestapt op `aria-checked` | Geslaagd |
 | G4 | Lintfout: ref aangepast tijdens het tekenen | ESLint | Verplaatst naar `useEffect` | Geslaagd |
 | G5 | Lintfout: tabicoon zonder componentnaam | ESLint | Icoon direct in de opties gedefinieerd | Geslaagd |
-| G6 | Tabbalk te krap: tekst stond ongeveer 1 pixel van de onderrand | Eigen controle van de app | Tabbalk hoger gemaakt (64 punten plus veilige zone van de telefoon), nu 10 pixels ruimte | Browser geslaagd, telefoon opnieuw testen (T13) |
+| G6 | Tabbalk te krap: tekst stond ongeveer 1 pixel van de onderrand | Eigen controle van de app | Tabbalk hoger gemaakt (64 punten plus veilige zone van de telefoon), nu 10 pixels ruimte | Geslaagd in de browser en op de telefoon (T13) |
 
 ## 6. Conclusie
 
